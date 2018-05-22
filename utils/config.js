@@ -36,6 +36,7 @@ var tryRunBitcoindWin32 = function (properties) {
     args.push('-rpcuser=' + properties.bitcoinUser)
     args.push('-rpcpassword=' + properties.bitcoinPass)
     args.push('-rpcport=' + properties.bitcoinPort)
+    args.push('-datadir=' + properties.bitcoinDataDir)
   }
   var spawn = cp.spawn
   var bitcoind = spawn(command, args, {cwd: cwd})
